@@ -127,6 +127,71 @@ header h1 {
   transform: scale(1.05);
 }
 
+/* CARD FESTAS E DATAS MARIANAS - SEM IMAGENS */
+.card.festas-datas {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform var(--transition-speed), background var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card.festas-datas:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: var(--card-hover);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+
+.card.festas-datas h2 {
+  margin: 0;
+  padding: 12px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--secondary-color);
+  justify-content: center;
+}
+
+.card.festas-datas .card-content {
+  background: #f3f3f5;
+  color: var(--text-dark);
+  padding: 14px;
+}
+
+.card.festas-datas .card-content article {
+  margin-bottom: 15px;
+}
+
+.card.festas-datas h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.card.festas-datas p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+
+/* BOTÃO SAIBA MAIS - tamanho bem menor */
+.card.festas-datas .btn-saiba {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 3px 6px;       /* ainda menor */
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 0.55rem;     /* fonte bem pequena */
+  transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.card.festas-datas .btn-saiba:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
 /* BOTÃO SAIBA MAIS */
 .btn-saiba {
   background: var(--secondary-color);
@@ -158,6 +223,39 @@ header h1 {
   opacity: 1;
   margin-top: 10px;
 }
+/* CONTÊINER PARA DOIS CARDS LADO A LADO */
+.container-duplo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Ajustes específicos para o card de inspirações */
+.card.inspiracoes h2 {
+  background: #015077; /* cor diferenciada */
+}
+
+.card.inspiracoes .historia {
+  font-style: italic;
+  color: #222;
+}
+
+/* Botões menores para esses cards */
+.card .btn-saiba {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container-duplo-cards {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
+
+
 
 /* FOOTER */
 footer {
