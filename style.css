@@ -8,7 +8,6 @@
   --transition-speed: 0.3s;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,198 +18,95 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f8f9fa;
   color: var(--text-dark);
-  line-height: 1.5;
 }
 
-/* HEADER */
-header {
+/* Apresentação topo */
+.apresentacao-topo {
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.apresentacao-topo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.apresentacao-topo h2 {
+  margin-bottom: 10px;
+}
+
+/* Layout principal */
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 250px);
+}
+
+/* Menu lateral */
+.menu-lateral {
+  width: 220px;
   background: var(--primary-color);
   color: var(--text-color);
   padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  font-family: 'Georgia', serif;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  margin-bottom: 15px;
-}
-
-.header-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
-.sobre-mim {
-  background: rgba(255,255,255,0.1);
-  padding: 12px 15px;
-  border-radius: 8px;
-  max-width: 600px;
+.menu-lateral h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
-/* IMAGEM DE APRESENTAÇÃO - zoom leve automático */
-.perfil-img {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white;
-  animation: zoom-leve 10s infinite alternate;
+.menu-lateral button {
+  background: var(--secondary-color);
+  border: none;
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background var(--transition-speed);
 }
 
-@keyframes zoom-leve {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); } /* aumento suave de 5% */
-  100% { transform: scale(1); }
+.menu-lateral button:hover {
+  background: var(--primary-color);
 }
 
-/* Remove zoom no hover */
-.perfil-img:hover {
-  transform: none;
-}
-
-/* CARDS */
-.container-cards {
+/* Conteúdo */
+.conteudo-principal {
+  flex: 1;
+  padding: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 30px;
 }
 
+/* Card */
 .card {
   background: var(--card-bg);
   color: var(--text-color);
   border-radius: 12px;
+  padding: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: transform var(--transition-speed), background var(--transition-speed), box-shadow var(--transition-speed);
+  transition: all var(--transition-speed);
 }
 
 .card:hover {
   transform: translateY(-5px) scale(1.02);
   background: var(--card-hover);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
 }
 
-.card h2 {
-  margin: 0;
-  padding: 12px;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--secondary-color);
-  justify-content: center;
-}
-
-.card-content {
-  background: #f3f3f5;
-  color: var(--text-dark);
-  padding: 14px;
-}
-
-.card-content article {
-  margin-bottom: 15px;
-}
-
-.card-content img {
+.card img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
-  object-fit: cover;
-  transition: transform var(--transition-speed);
 }
 
-.card-content img:hover {
-  transform: scale(1.05);
-}
-
-/* CARD FESTAS E DATAS MARIANAS - SEM IMAGENS */
-.card.festas-datas {
-  background: var(--card-bg);
-  color: var(--text-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: transform var(--transition-speed), background var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-.card.festas-datas:hover {
-  transform: translateY(-5px) scale(1.02);
-  background: var(--card-hover);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-}
-
-.card.festas-datas h2 {
-  margin: 0;
-  padding: 12px;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--secondary-color);
-  justify-content: center;
-}
-
-.card.festas-datas .card-content {
-  background: #f3f3f5;
-  color: var(--text-dark);
-  padding: 14px;
-}
-
-.card.festas-datas .card-content article {
-  margin-bottom: 15px;
-}
-
-.card.festas-datas h3 {
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-}
-
-.card.festas-datas p {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-
-/* BOTÃO SAIBA MAIS - tamanho bem menor */
-.card.festas-datas .btn-saiba {
-  background: var(--secondary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 3px 6px;       /* ainda menor */
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 4px;
-  font-weight: bold;
-  font-size: 0.55rem;     /* fonte bem pequena */
-  transition: background var(--transition-speed), transform var(--transition-speed);
-}
-
-.card.festas-datas .btn-saiba:hover {
-  background: var(--primary-color);
-  transform: scale(1.05);
-}
-/* BOTÃO SAIBA MAIS */
-.btn-saiba {
-  background: var(--secondary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 8px;
-  font-weight: bold;
-  transition: background var(--transition-speed), transform var(--transition-speed);
-}
-
-.btn-saiba:hover {
-  background: var(--primary-color);
-  transform: scale(1.05);
-}
-
-/* HISTÓRIA (escondida de início) */
 .historia {
   max-height: 0;
   overflow: hidden;
@@ -223,62 +119,32 @@ header h1 {
   opacity: 1;
   margin-top: 10px;
 }
-/* CONTÊINER PARA DOIS CARDS LADO A LADO */
-.container-duplo-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
 
-/* Ajustes específicos para o card de inspirações */
-.card.inspiracoes h2 {
-  background: #015077; /* cor diferenciada */
-}
-
-.card.inspiracoes .historia {
-  font-style: italic;
-  color: #222;
-}
-
-/* Botões menores para esses cards */
-.card .btn-saiba {
-  padding: 6px 12px;
-  font-size: 0.85rem;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .container-duplo-cards {
-    grid-template-columns: 1fr;
-    padding: 15px;
-  }
-}
-
-
-
-/* FOOTER */
-footer {
-  background: var(--primary-color);
+.btn-saiba {
+  background: var(--secondary-color);
   color: var(--text-color);
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9rem;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 6px;
+  font-weight: bold;
+  transition: all var(--transition-speed);
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
+.btn-saiba:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
 
-  .perfil-img {
-    width: 100px;
-    height: 100px;
+/* Responsivo */
+@media(max-width:768px){
+  .main-container {
+    flex-direction: column;
   }
-
-  .container-cards {
-    grid-template-columns: 1fr;
-    padding: 15px;
+  .menu-lateral {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

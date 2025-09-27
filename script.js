@@ -1,24 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const botoes = document.querySelectorAll(".btn-saiba");
+// Botão "Saiba Mais"
+document.querySelectorAll(".btn-saiba").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const historia = btn.nextElementSibling;
+    historia.classList.toggle("ativo");
+    btn.textContent = historia.classList.contains("ativo") ? "Fechar" : "Saiba Mais";
+  });
+});
 
-  botoes.forEach((botao) => {
-    botao.addEventListener("click", () => {
-      const historia = botao.nextElementSibling;
+// Filtragem de cards
+const botoesFiltro = document.querySelectorAll(".menu-lateral button");
+const cards = document.querySelectorAll(".card");
 
-      document.querySelectorAll(".historia.ativo").forEach((outra) => {
-        if (outra !== historia) {
-          outra.classList.remove("ativo");
-          outra.previousElementSibling.textContent = "Saiba Mais";
-        }
-      });
-
-      historia.classList.toggle("ativo");
-
-      if (historia.classList.contains("ativo")) {
-        botao.textContent = "Fechar";
-      } else {
-        botao.textContent = "Saiba Mais";
-      }
+botoesFiltro.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filtro = btn.getAttribute("data-filtro");
+    cards.forEach(card => {
+      if (filtro === "todos") card.style.display = "block";
+      else if (card.classList.contains(filtro)) card.style.display = "block";
+      else card.style.display = "none";
     });
   });
 });
