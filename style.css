@@ -193,12 +193,12 @@ body {
 
   /* Ajusta imagens apenas para celular */
   .intro-img {
-    width: 80%;      /* imagem da introdução menor */
+    width: 120%;      /* imagem da introdução menor */
     height: auto;
   }
 
   .apresentacao-img {
-    width: 70%;      /* imagem do card de apresentação menor */
+    width: 100%;      /* imagem do card de apresentação menor */
     height: auto;
   }
 
@@ -207,3 +207,4 @@ body {
     height: auto;    /* garante que todas as imagens dentro dos cards se ajustem ao celular */
   }
 }
+
