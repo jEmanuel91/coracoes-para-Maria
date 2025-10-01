@@ -180,8 +180,8 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsivo */
-@media(max-width:768px){
+@media (max-width: 768px) {
+  /* Ajusta a estrutura do layout */
   .main-container {
     flex-direction: column;
   }
@@ -189,5 +189,21 @@ body {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  /* Ajusta imagens apenas para celular */
+  .intro-img {
+    width: 80%;      /* imagem da introdução menor */
+    height: auto;
+  }
+
+  .apresentacao-img {
+    width: 70%;      /* imagem do card de apresentação menor */
+    height: auto;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;    /* garante que todas as imagens dentro dos cards se ajustem ao celular */
   }
 }
