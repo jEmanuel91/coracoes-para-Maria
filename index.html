@@ -3,41 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corações para Maria - Luz de Maria</title>
+  <title>Corações para Maria</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/7f1c6d6c12.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <!-- Container principal -->
-  <div class="main-container">
-    
-    <!-- Menu lateral com a apresentação -->
-    <div class="menu-lateral">
-      <!-- Apresentação dentro do menu lateral -->
-      <div class="apresentacao-lateral">
-        <img src="minha-imagem.jpeg.jpeg" alt="João Emanuel">
-        <h2>Olá, meu nome é João Emanuel</h2>
-        <p>Filho de Maria, católico praticante, mas confesso: sou meio doido às vezes (doido no bom sentido).
-           Vivo entre um coração cheio de fé e umas ideias malucas que aparecem no meio do caminho.</p>
-        <p>O que me move? A Igreja, os santos, Nossa Senhora e aquele desejo de levar a fé pro mundo de
-           um jeito simples e direto. Ah… e claro: sempre tentando misturar seriedade com umas pitadas de
-           humor, porque até os “meio doidos” podem ser de Deus. 🙏</p>
-      </div>
+  <div class="main-container">   
 
-  <!-- Container principal -->
-  <div class="main-container">
-    
+<!-- Tela de introdução -->
+<div id="intro">
+  <img src="/imagens/Virgem Maria em Linhas Douradas.png" 
+       alt="Nossa Senhora" 
+       class="intro-img">
+</div>
+
     <!-- Menu lateral -->
     <div class="menu-lateral">
       <h2>Menu</h2>
+      <button data-filtro="apresentacao">Apresentação</button>
       <button data-filtro="aparicao">Aparições</button>
       <button data-filtro="santos">Santos</button>
-      <button data-filtro="todos">Todos</button>
     </div>
 
     <!-- Conteúdo principal -->
     <div class="conteudo-principal">
+
+<!-- Card Apresentação -->
+<div class="card apresentacao">
+  <img src="/imagens/minha-imagem.jpeg.jpeg" alt="João Emanuel" class="apresentacao-img">
+  <h2>Olá, meu nome é João Emanuel</h2>
+  <p>Filho de Maria e católico praticante, carrego a fé no coração e um jeito leve de viver. Às vezes meio doido 😅, procuro unir seriedade com alegria para mostrar que seguir a Deus é simples e cheio de esperança.</p>
+</div>
 
 
       <!-- --------- SANTOS MARIANOS -------- -->
@@ -429,4 +427,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
