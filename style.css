@@ -20,45 +20,34 @@ body {
   color: var(--text-dark);
 }
 
-/* Apresentação topo */
-.apresentacao-topo {
-  background: var(--primary-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 30px 20px;
-}
-
-.apresentacao-topo img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid white;
-  margin-bottom: 15px;
-  object-fit: cover;
-}
-
-.apresentacao-topo h2 {
-  margin-bottom: 10px;
-}
-
-/* Layout principal */
-.main-container {
-  display: flex;
-  min-height: calc(100vh - 250px);
-}
-
-/* Menu lateral */
-.menu-lateral {
-  width: 220px;
+.apresentacao-lateral {
   background: var(--primary-color);
   color: var(--text-color);
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.menu-lateral h2 {
+.apresentacao-lateral img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.apresentacao-lateral h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.apresentacao-lateral p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -148,3 +137,4 @@ body {
     justify-content: space-around;
   }
 }
+
