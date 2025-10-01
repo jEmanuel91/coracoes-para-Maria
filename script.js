@@ -35,6 +35,6 @@ window.addEventListener("load", () => {
   if (intro) {
     setTimeout(() => {
       intro.style.display = "none";
-    }, 2000); // some depois de 4 segundos
+    }, 4000); // some depois de 4 segundos
   }
 });
